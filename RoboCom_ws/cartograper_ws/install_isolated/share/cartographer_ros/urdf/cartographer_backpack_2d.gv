@@ -1,0 +1,14 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"horizontal_laser_link" [label="horizontal_laser_link"];
+"imu_link" [label="imu_link"];
+"vertical_laser_link" [label="vertical_laser_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "horizontal_laser_link_joint" [label="xyz: 0.1007 0 0.0558 \nrpy: 0 -0 0"]
+"horizontal_laser_link_joint" -> "horizontal_laser_link"
+"base_link" -> "imu_link_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"imu_link_joint" -> "imu_link"
+"base_link" -> "vertical_laser_link_joint" [label="xyz: 0.1007 0 0.1814 \nrpy: 0 -1.5708 3.14159"]
+"vertical_laser_link_joint" -> "vertical_laser_link"
+}
